@@ -8,6 +8,7 @@ pipeline {
   agent any
   stages {
     stage('Preparation') {
+      agent any
       steps {
         sh "mkdir -p $WORKSPACE/repo;\
            git clone $BUILD_SCRIPTS_GIT repo/$BUILD_SCRIPTS
@@ -19,6 +20,7 @@ pipeline {
       }
     }
     stage('Build') {
+      agent any
       steps {
         sh "mvn -Dmaven.test.failure.ignore clean install package docker:build"
         sh "OLD_IFS=${IFS}; \
