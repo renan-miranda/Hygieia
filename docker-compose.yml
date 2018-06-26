@@ -69,11 +69,11 @@ services:
     depends_on:
       - db-setup
 
-  hpsm-cmdb-collector:
-    #build: collectors/cmdb/hpsm
-    image: renanmiranda01/hygieia-hpsm-cmdb-collector
-    depends_on:
-      - db-setup
+#  hpsm-cmdb-collector:
+#    build: collectors/cmdb/hpsm
+#    image: renanmiranda01/hygieia-hpsm-cmdb-collector
+#    depends_on:
+#      - db-setup
 
   github-collector:
     #build: collectors/scm/github
