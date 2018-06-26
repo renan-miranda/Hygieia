@@ -25,7 +25,7 @@ services:
 
   api-audit:
     #build: api-audit
-    image: renanmiranda01/hygieia-api-audit
+    image: renanmiranda01/hygieia-apiaudit
     depends_on:
       - db-setup
     ports:
